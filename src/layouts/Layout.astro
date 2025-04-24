@@ -1,22 +1,34 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
+---
+import '../styles/base.css';
+---
+
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Metadatos básicos SEO -->
+    <title>Mesón O Mesón</title>
+    <meta name="description" content="Descubre O Mesón en A Coruña, donde Galicia cobra sabor. Prueba nuestra cazuela de pulpo con langostinos, platos veganos y otros clásicos gallegos elaborados con ingredientes locales. Ven y disfruta de un ambiente acogedor y auténtico. ¡Te esperamos!" />
+    
+    <!-- Open Graph / redes sociales -->
+    <meta property="og:title" content="Mesón O Mesón" />
+    <meta property="og:description" content="Descubre O Mesón en A Coruña, donde Galicia cobra sabor. Prueba nuestra cazuela de pulpo con langostinos, platos veganos y otros clásicos gallegos elaborados con ingredientes locales. Ven y disfruta de un ambiente acogedor y auténtico. ¡Te esperamos!" />
+    <meta property="og:image" content="{ogImage}" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="/styles/global.css" />
+    
+    <!-- Aquí puedes incluir cualquier script o estilo adicional -->
+    
+    <!-- Slot para meta tags adicionales específicos de cada página -->
+    <slot name="head" />
+  </head>
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
