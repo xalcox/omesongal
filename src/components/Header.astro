@@ -16,12 +16,16 @@
   <div id="nav-items" class="flex items-center space-x-2 sm:space-x-6 text-white text-sm sm:text-base transition-colors duration-300">
 
     <!-- Facebook (oculto en móvil) -->
-    <a href="#" aria-label="Facebook"
-       class="hidden sm:inline-block hover:text-blue-200 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M22.675 0h-21.35C.597 0 0 .598 0 1.333v21.333C0 23.402.597 24 1.325 24H12.82v-9.333H9.692v-3.667h3.128V8.414c0-3.1 1.894-4.785 4.66-4.785 1.325 0 2.464.099 2.797.143v3.243l-1.918.001c-1.504 0-1.796.716-1.796 1.764v2.312h3.587l-.467 3.667h-3.12V24h6.116C23.403 24 24 23.402 24 22.667V1.333C24 .598 23.403 0 22.675 0z"/>
-      </svg>
-    </a>
+    <a href="https://www.facebook.com/tu-pagina" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    aria-label="Facebook"
+    class="hidden sm:inline-block hover:text-blue-200 transition">
+   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24">
+     <path d="M22.675 0h-21.35C.597 0 0 .598 0 1.333v21.333C0 23.402.597 24 1.325 24H12.82v-9.333H9.692v-3.667h3.128V8.414c0-3.1 1.894-4.785 4.66-4.785 1.325 0 2.464.099 2.797.143v3.243l-1.918.001c-1.504 0-1.796.716-1.796 1.764v2.312h3.587l-.467 3.667h-3.12V24h6.116C23.403 24 24 23.402 24 22.667V1.333C24 .598 23.403 0 22.675 0z"/>
+   </svg>
+ </a>
+ 
 
     <!-- Sobre nosotros -->
     <a href="#sobre-nosotros"
@@ -43,7 +47,7 @@
       const header = document.getElementById('main-header');
       const navItems = document.getElementById('nav-items');
       const logo = document.getElementById('logo');
-      const isScrolled = window.scrollY > 200;
+      const isScrolled = window.scrollY > 250;
   
       header.classList.toggle('bg-white', isScrolled);
       header.classList.toggle('shadow-md', isScrolled);
