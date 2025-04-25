@@ -1,0 +1,12 @@
+@tailwind base; 
+@tailwind components;
+@tailwind utilities;
+
+/* Fondo blanco roto para toda la página */
+:root {
+  --bg-radial-blue: radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #f0f4f8 100%);
+}
+
+body {
+  @apply bg-[radial-gradient(125%_125%_at_50%_10%,_#ffffff_40%,_#f0f4f8_100%)] text-blue-950;
+}

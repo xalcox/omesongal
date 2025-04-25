@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-    --bg-radial-blue: radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #029ace 100%);
-  }
-  

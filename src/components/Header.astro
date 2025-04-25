@@ -1,0 +1,66 @@
+---
+// Componente Hero con Header para O'Mesón
+---
+<header id="main-header"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-500
+               bg-gradient-to-b from-black/60 to-transparent
+               py-4 sm:py-6 px-4 sm:px-10
+               flex items-center justify-between">
+
+  <!-- Logo -->
+  <div id="logo" class="font-serif text-2xl sm:text-3xl tracking-wide font-bold text-white whitespace-nowrap">
+    O&nbsp;Mesón
+  </div>
+
+  <!-- Navegación + redes -->
+  <div id="nav-items" class="flex items-center space-x-2 sm:space-x-6 text-white text-sm sm:text-base transition-colors duration-300">
+
+    <!-- Facebook (oculto en móvil) -->
+    <a href="#" aria-label="Facebook"
+       class="hidden sm:inline-block hover:text-blue-200 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M22.675 0h-21.35C.597 0 0 .598 0 1.333v21.333C0 23.402.597 24 1.325 24H12.82v-9.333H9.692v-3.667h3.128V8.414c0-3.1 1.894-4.785 4.66-4.785 1.325 0 2.464.099 2.797.143v3.243l-1.918.001c-1.504 0-1.796.716-1.796 1.764v2.312h3.587l-.467 3.667h-3.12V24h6.116C23.403 24 24 23.402 24 22.667V1.333C24 .598 23.403 0 22.675 0z"/>
+      </svg>
+    </a>
+
+    <!-- Sobre nosotros -->
+    <a href="#sobre-nosotros"
+       class="px-2 sm:px-4 py-1 sm:py-2 font-medium hover:text-blue-200 transition whitespace-nowrap">
+      Sobre nosotros
+    </a>
+
+    <!-- Contacto -->
+    <a href="#contacto"
+       class="px-3 sm:px-5 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-md
+              bg-blue-600 text-white hover:bg-blue-700 transition whitespace-nowrap">
+      Contacto
+    </a>
+  </div>
+</header>
+
+<script is:inline>
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      const navItems = document.getElementById('nav-items');
+      const logo = document.getElementById('logo');
+      const isScrolled = window.scrollY > 200;
+  
+      header.classList.toggle('bg-white', isScrolled);
+      header.classList.toggle('shadow-md', isScrolled);
+      header.classList.toggle('bg-gradient-to-b', !isScrolled);
+      header.classList.toggle('from-black/60', !isScrolled);
+      header.classList.toggle('to-transparent', !isScrolled);
+  
+      navItems.classList.toggle('text-blue-900', isScrolled);
+      navItems.classList.toggle('text-white', !isScrolled);
+  
+      logo.classList.toggle('text-blue-900', isScrolled);
+      logo.classList.toggle('text-white', !isScrolled);
+    });
+  </script>
+  
+
+
+
+
+  

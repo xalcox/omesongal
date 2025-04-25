@@ -1,30 +1,61 @@
-<div class="bg-sky-100 py-24 px-6 sm:px-10">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-8xl font-serif font-bold text-blue-900 mb-6">
-        O'Mesón
-      </h1>
-      
-      <p class="text-xl text-blue-800 mb-10 max-w-2xl mx-auto">
-        Auténtica cocina gallega con los mejores sabores del mar y la tierra
-      </p>
-      
-      <div class="mt-10">
-        <a 
-          href="/contacto" 
-          class="inline-block px-8 py-3 text-lg border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white font-medium rounded-md transition-all duration-300"
-        >
-          Contáctanos
-        </a>
-      </div>
+---
+// Componente Hero con historia para O'Mesón
+---
+<section
+  id="hero"
+  class="relative min-h-screen flex items-center justify-center bg-cover bg-center px-6 sm:px-10 animate-zoom-in-slow"
+  style="background-image: url('/src/assets/fondo.png');"
+>
+  <!-- Overlay degradado azul oscuro -->
+  <div class="absolute inset-0 bg-gradient-to-b from-sky-900/80 to-sky-800/60"></div>
+
+  <!-- Contenido centrado -->
+  <div class="relative z-10 max-w-4xl mx-auto text-center text-white">
+
+    <!-- Ícono decorativo -->
+    <div class="mb-4 animate-fade-in-up delay-75">
+      <svg class="mx-auto h-6 w-6 text-sky-200" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2l3 7h7l-5.6 4.6L18.2 22 12 17.8 5.8 22l1.8-8.4L2 9h7z"/>
+      </svg>
+    </div>
+
+    <!-- Nombre del restaurante -->
+    <h1 class="text-6xl sm:text-6xl lg:text-8xl font-serif font-bold mb-4 animate-fade-in-up">
+      O Mesón
+    </h1>
+
+    <!-- Frase secundaria -->
+    <p class="text-sm sm:text-lg italic mb-4 text-sky-200 animate-fade-in-up delay-100">
+      Tradición gallega en cada plato
+    </p>
+
+    <!-- Descripción principal -->
+    <p class="text-base sm:text-xl mb-8 sm:mb-10 max-w-2xl mx-auto animate-fade-in-up delay-200">
+      Descubre O Mesón en A Coruña, donde Galicia cobra sabor.
+    </p>
+
+    <!-- Botones responsivos -->
+    <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-6 animate-fade-in-up delay-400">
+      <!-- Botón principal: Reservar -->
+      <button
+        class="px-6 py-2 text-base sm:text-lg border-2 border-white text-white hover:bg-white hover:text-blue-900 font-medium rounded-md transition-all duration-300"
+        aria-label="Reservar mesa"
+      >
+        Reservar
+      </button>
+    
+      <!-- Botón secundario: Ver menú (minimalista, mismo hover que reservar) -->
+      <a
+        href="#menu"
+        class="px-6 py-2 text-base sm:text-lg text-white hover:bg-white hover:text-blue-900 border-2 border-transparent hover:border-white font-medium rounded-md transition-all duration-300 text-center"
+        aria-label="Ver menú"
+      >
+        Ver menú
+      </a>
     </div>
   </div>
+</section>
 
-  <div class="bg-white py-12 px-6 sm:px-10">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl font-serif font-bold text-blue-900 mb-6">
-        Descubre nuestra historia
-      </h2>
-      <p class="text-lg text-blue-800 mb-10 max-w-2xl mx-auto">
-        En O'Mesón, cada plato cuenta una historia. Desde nuestros inicios, nos hemos dedicado a ofrecer lo mejor de la gastronomía gallega, utilizando ingredientes frescos y locales.
-      </p>
-    </div>
+
+
+
