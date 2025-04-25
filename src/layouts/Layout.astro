@@ -6,25 +6,40 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Metadatos básicos SEO -->
+  
+    <!-- SEO general -->
     <title>O Mesón | Cocina gallega en A Coruña</title>
-    <meta name="description" content="Descubre O Mesón en A Coruña, donde Galicia cobra sabor. Prueba nuestra cazuela de pulpo con langostinos, platos veganos y otros clásicos gallegos elaborados con ingredientes locales. Ven y disfruta de un ambiente acogedor y auténtico. ¡Te esperamos!" />
-
-    <!-- Open Graph / redes sociales -->
-    <meta property="og:title" content="Mesón O Mesón" />
-    <meta property="og:description" content="Descubre O Mesón en A Coruña, donde Galicia cobra sabor. Prueba nuestra cazuela de pulpo con langostinos, platos veganos y otros clásicos gallegos elaborados con ingredientes locales. Ven y disfruta de un ambiente acogedor y auténtico. ¡Te esperamos!" />
-    <meta property="og:image" content="{ogImage}" />
-
+    <meta name="description" content="Descubre O Mesón en A Coruña, donde Galicia cobra sabor. Prueba nuestra cazuela de pulpo con langostinos, platos veganos y otros clásicos gallegos elaborados con ingredientes locales. Disfruta de un ambiente acogedor y auténtico. ¡Te esperamos!" />
+    <meta name="keywords" content="O Mesón, restaurante gallego, comida gallega, A Coruña, Cedeira, pulpo, cocina tradicional, platos caseros" />
+    <meta name="author" content="O Mesón" />
+    <meta name="robots" content="index, follow" />
+  
+    <!-- Open Graph (Facebook, WhatsApp, Instagram, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="O Mesón | Cocina gallega en A Coruña" />
+    <meta property="og:description" content="Descubre O Mesón en A Coruña, donde Galicia cobra sabor. Platos caseros, mariscos frescos y cocina tradicional gallega en un ambiente acogedor." />
+    <meta property="og:image" content="https://omeson.es/opengraph-hero.jpg" />
+    <meta property="og:url" content="https://omeson.es" />
+    <meta property="og:site_name" content="O Mesón" />
+  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="O Mesón | Cocina gallega en A Coruña" />
+    <meta name="twitter:description" content="Descubre O Mesón en A Coruña, donde Galicia cobra sabor. Platos caseros, mariscos frescos y cocina tradicional gallega." />
+    <meta name="twitter:image" content="https://omeson.es/opengraph-hero.jpg" />
+    <meta name="twitter:site" content="@tu_usuario_si_lo_tienes" />
+  
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  
     <!-- Estilos globales -->
     <link rel="stylesheet" href="/styles/global.css" />
-
-    <!-- Slot para meta tags adicionales específicos de cada página -->
+  
+    <!-- Slot para metadatos adicionales específicos de cada página -->
     <slot name="head" />
   </head>
+  
+  
 
   <body>
     <slot />
