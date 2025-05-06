@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sobre Nosotros">
+
+    <section
+      id="sobre-nosotros"
+      class="relative min-h-screen w-full bg-cover bg-center flex flex-col items-center justify-start px-6 sm:px-10 pt-32 pb-16"
+      style="background-image: url('/src/assets/fondo.png');"
+    >
+      <!-- Capa azul degradada encima del fondo -->
+      <div class="absolute inset-0 bg-gradient-to-b from-sky-900/70 to-sky-800/70"></div>
+  
+      <!-- Contenido principal -->
+      <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-5xl">
+  
+        <!-- Tarjeta blanca animada -->
+        <div class="bg-white/90 backdrop-blur-md shadow-lg rounded-xl p-10 w-full flex flex-col items-center gap-10 animate-fade-in-up">
+  
+          <!-- Título -->
+          <div class="text-center text-blue-900">
+            <div class="mb-2" aria-hidden="true">
+              <svg class="mx-auto h-6 w-6 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3 7h7l-5.6 4.6L18.2 22 12 17.8 5.8 22l1.8-8.4L2 9h7z" />
+              </svg>
+            </div>
+  
+            <h1 class="text-5xl sm:text-6xl font-serif font-bold mb-4">
+              Sobre Nosotros
+            </h1>
+  
+            <p class="text-base sm:text-lg italic text-blue-800">
+              Una historia de esfuerzo familiar desde 1986
+            </p>
+          </div>
+  
+          <!-- Texto descriptivo -->
+          <div class="text-blue-900 text-justify text-base sm:text-lg max-w-3xl space-y-6 leading-relaxed">
+            <p>
+              Nuestro mesón abrió sus puertas en noviembre de 1986, fundado con mucho cariño por mis padres. Desde el inicio, nos especializamos en carnes y pescados de primera calidad elaborados de manera tradicional, acompañados de una cuidada selección de vinos y un trato cercano que nos distingue.
+            </p>
+            <p>
+              En 2002, tras el fallecimiento de mi padre en un accidente, asumí la dirección junto a mi madre. Juntas continuamos con esfuerzo y dedicación este proyecto familiar, logrando formar una clientela maravillosa que hoy sigue confiando en nosotros.
+            </p>
+            <p>
+              Actualmente, sigo al frente junto a mi marido, trabajando en equipo cada día para ofrecer la mejor experiencia gastronómica posible. Gracias a nuestra pasión por la cocina y el buen hacer, en 2008 obtuvimos el certificado de calidad y excelencia, convirtiéndonos en el primer establecimiento de restauración de la villa en recibirlo.
+            </p>
+            <p>
+              Uno de nuestros mayores orgullos es haber introducido en la zona el marraxo (tiburón), hoy en día una de nuestras especialidades más reconocidas.
+            </p>
+          </div>
+  
+        </div>
+  
+      </div>
+    </section>
+  
+  </Layout>
+  
