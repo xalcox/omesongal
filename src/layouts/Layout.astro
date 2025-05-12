@@ -10,26 +10,26 @@ import Footer from "../components/Footer.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
     <!-- SEO general -->
-    <title>O Mesón | Cocina gallega en A Cederia</title>
-    <meta name="description" content="Descubre O Mesón en A Coruña, donde Galicia cobra sabor. Prueba nuestra cazuela de pulpo con langostinos, platos veganos y otros clásicos gallegos elaborados con ingredientes locales. Disfruta de un ambiente acogedor y auténtico. ¡Te esperamos!" />
-    <meta name="keywords" content="O Mesón, restaurante gallego, comida gallega, A Coruña, Cedeira, pulpo, cocina tradicional, platos caseros" />
+    <title>O Mesón Cedeira | Pulpo, cocina gallega y platos caseros</title>
+    <meta name="description" content="O Mesón en Cedeira es un restaurante gallego con pulpo, cazuela de marisco, platos caseros y opciones veganas. Tradición y sabor frente al mar, desde 1986." />
+    <meta name="keywords" content="restaurante O Mesón, restaurante en Cedeira, comida gallega, cocina gallega tradicional, pulpo con langostinos, platos caseros gallegos, restaurante vegano Cedeira, comer en Cedeira, mariscos Galicia" />
     <meta name="author" content="O Mesón" />
     <meta name="robots" content="index, follow" />
   
     <!-- Open Graph (Facebook, WhatsApp, Instagram, LinkedIn) -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="O Mesón | Cocina gallega en A Coruña" />
-    <meta property="og:description" content="Descubre O Mesón en A Coruña, donde Galicia cobra sabor. Platos caseros, mariscos frescos y cocina tradicional gallega en un ambiente acogedor." />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="O Mesón Cedeira | Pulpo, cocina gallega y platos caseros" />
+    <meta property="og:description" content="Descubre O Mesón en Cedeira (A Coruña), donde Galicia cobra sabor. Platos caseros, mariscos frescos y cocina tradicional gallega en un ambiente acogedor." />
     <meta property="og:image" content="https://omeson.es/opengraph-hero.jpg" />
     <meta property="og:url" content="https://omeson.es" />
     <meta property="og:site_name" content="O Mesón" />
   
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="O Mesón | Cocina gallega en A Coruña" />
-    <meta name="twitter:description" content="Descubre O Mesón en A Coruña, donde Galicia cobra sabor. Platos caseros, mariscos frescos y cocina tradicional gallega." />
+    <meta name="twitter:title" content="O Mesón Cedeira | Pulpo, cocina gallega y platos caseros" />
+    <meta name="twitter:description" content="Descubre O Mesón en Cedeira (A Coruña), donde Galicia cobra sabor. Platos caseros, mariscos frescos y cocina tradicional gallega." />
     <meta name="twitter:image" content="https://omeson.es/opengraph-hero.jpg" />
-    <meta name="twitter:site" content="@tu_usuario_si_lo_tienes" />
   
     <!-- Favicon -->
     <link rel="icon" href="/favicon.png" type="image/png" />
@@ -39,7 +39,47 @@ import Footer from "../components/Footer.astro";
   
     <!-- Slot para metadatos adicionales específicos de cada página -->
     <slot name="head" />
-  </head>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "O Mesón",
+        "image": "https://omeson.es/opengraph-hero.jpg",
+        "url": "https://omeson.es",
+        "telephone": "+34 981481226",
+        "priceRange": "€€",
+        "servesCuisine": ["Gallega", "Casera", "Mariscos", "Vegana"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cedeira",
+          "addressRegion": "A Coruña",
+          "addressCountry": "ES"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "13:00",
+            "closes": "16:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "20:00",
+            "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "13:00",
+            "closes": "16:00"
+          }
+        ]
+      }
+      </script>
+    </head>
+    
   
   
 

@@ -1,60 +1,154 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-
 <Layout title="Sobre Nosotros">
+  <section
+  id="sobre-nosotros"
+  class="relative min-h-[100vh] w-full bg-cover bg-center flex items-center justify-center px-4 sm:px-10 pt-32 sm:pt-12 pb-12"
+    style="background-image: url('/src/assets/fondo.png');"
+  >
+    <!-- Capa azul degradada encima del fondo -->
+    <div class="absolute inset-0 bg-gradient-to-b from-sky-900/70 to-sky-800/70"></div>
 
-    <section
-      id="sobre-nosotros"
-      class="relative min-h-screen w-full bg-cover bg-center flex flex-col items-center justify-start px-6 sm:px-10 pt-32 pb-16"
-      style="background-image: url('/src/assets/fondo.png');"
-    >
-      <!-- Capa azul degradada encima del fondo -->
-      <div class="absolute inset-0 bg-gradient-to-b from-sky-900/70 to-sky-800/70"></div>
-  
-      <!-- Contenido principal -->
-      <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-5xl">
-  
-        <!-- Tarjeta blanca animada -->
-        <div class="bg-white/90 backdrop-blur-md shadow-lg rounded-xl p-10 w-full flex flex-col items-center gap-10 animate-fade-in-up">
-  
-          <!-- Título -->
-          <div class="text-center text-blue-900">
-            <div class="mb-2" aria-hidden="true">
-              <svg class="mx-auto h-6 w-6 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3 7h7l-5.6 4.6L18.2 22 12 17.8 5.8 22l1.8-8.4L2 9h7z" />
-              </svg>
-            </div>
-  
-            <h1 class="text-5xl sm:text-6xl font-serif font-bold mb-4">
-              Sobre Nosotros
-            </h1>
-  
-            <p class="text-base sm:text-lg italic text-blue-800">
-              Una historia de esfuerzo familiar desde 1986
-            </p>
-          </div>
-  
-          <!-- Texto descriptivo -->
-          <div class="text-blue-900 text-justify text-base sm:text-lg max-w-3xl space-y-6 leading-relaxed">
-            <p>
-              Nuestro mesón abrió sus puertas en noviembre de 1986, fundado con mucho cariño por mis padres. Desde el inicio, nos especializamos en carnes y pescados de primera calidad elaborados de manera tradicional, acompañados de una cuidada selección de vinos y un trato cercano que nos distingue.
-            </p>
-            <p>
-              En 2002, tras el fallecimiento de mi padre en un accidente, asumí la dirección junto a mi madre. Juntas continuamos con esfuerzo y dedicación este proyecto familiar, logrando formar una clientela maravillosa que hoy sigue confiando en nosotros.
-            </p>
-            <p>
-              Actualmente, sigo al frente junto a mi marido, trabajando en equipo cada día para ofrecer la mejor experiencia gastronómica posible. Gracias a nuestra pasión por la cocina y el buen hacer, en 2008 obtuvimos el certificado de calidad y excelencia, convirtiéndonos en el primer establecimiento de restauración de la villa en recibirlo.
-            </p>
-            <p>
-              Uno de nuestros mayores orgullos es haber introducido en la zona el marraxo (tiburón), hoy en día una de nuestras especialidades más reconocidas.
-            </p>
-          </div>
-  
-        </div>
-  
+    <!-- Contenido principal -->
+    <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-6xl bg-white/90 backdrop-blur-md shadow-xl rounded-xl p-6 sm:p-10 gap-8">
+
+      <!-- Encabezado -->
+      <div class="text-center text-blue-900">
+        <svg class="mx-auto h-6 w-6 text-blue-400 mb-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l3 7h7l-5.6 4.6L18.2 22 12 17.8 5.8 22l1.8-8.4L2 9h7z" />
+        </svg>
+        <h1 class="text-4xl sm:text-6xl font-serif font-bold mb-2">Sobre Nosotros</h1>
+        <p class="text-sm sm:text-lg italic text-blue-800">
+          Una historia de esfuerzo familiar desde 1986
+        </p>
       </div>
-    </section>
-  
-  </Layout>
-  
+
+      <!-- TEXTO COMPLETO: solo en escritorio -->
+      <div class="hidden sm:block text-blue-900 text-justify text-base sm:text-lg max-w-4xl space-y-4 leading-relaxed">
+        <p>
+          Nuestro mesón abrió sus puertas en 1986, fundado con mucho cariño por mis padres. Desde el inicio, nos especializamos en carnes y pescados de primera calidad elaborados de manera tradicional, con una cuidada selección de vinos y un trato cercano que nos distingue.  
+          Poco a poco, y con mucho esfuerzo, nos fuimos ganando el respeto de vecinos y visitantes que valoraban la autenticidad de nuestra cocina casera.
+        </p>
+        <p>
+          En 2002, tras el fallecimiento de mi padre, asumí la dirección junto a mi madre. Con esfuerzo y dedicación, logramos seguir adelante con el proyecto familiar y formar una clientela maravillosa.  
+          No fue una etapa fácil, pero nos unimos más que nunca y mantuvimos vivas las raíces y valores que mi padre había sembrado.
+        </p>
+        <p>
+          Hoy lo gestiono junto a mi marido, y gracias a nuestra pasión por la cocina, en 2008 recibimos el certificado de calidad, convirtiéndonos en el primer restaurante de la villa en obtenerlo.  
+          Este reconocimiento fue fruto de años de trabajo constante, cariño por el detalle y un compromiso firme con la excelencia.
+        </p>
+        <p>
+          A día de hoy seguimos trabajando cada día para ofrecer una experiencia cercana, sincera y de calidad.  
+          Seguimos innovando sin perder nuestra esencia, porque sabemos que nuestras raíces son lo que nos hace únicos.
+        </p>
+      </div>
+
+      <!-- TEXTO + IMÁGENES REDUCIDOS: solo en móvil -->
+      <div class="flex flex-col gap-10 w-full sm:hidden">
+        <!-- 1986 -->
+        <div class="flex flex-col items-center text-center gap-4">
+          <div class="w-24 h-24 rounded-full border-4 border-blue-800 overflow-hidden">
+            <img src="/src/assets/apertura.png" alt="1986" class="w-full h-full object-cover" />
+          </div>
+          <div class="text-blue-900 text-sm leading-relaxed px-2">
+            <p class="font-semibold text-blue-800 mb-1">1986 · Apertura</p>
+            <p>
+              Fundado con cariño por mis padres, el mesón se convirtió rápidamente en un referente de cocina tradicional con alma familiar.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2002 -->
+        <div class="flex flex-col items-center text-center gap-4">
+          <div class="w-24 h-24 rounded-full border-4 border-blue-800 overflow-hidden">
+            <img src="/src/assets/2002.png" alt="2002" class="w-full h-full object-cover" />
+          </div>
+          <div class="text-blue-900 text-sm leading-relaxed px-2">
+            <p class="font-semibold text-blue-800 mb-1">2002 · Nuevo rumbo</p>
+            <p>
+              Tras el fallecimiento de mi padre, asumí el mando con mi madre. Juntas mantuvimos el legado con esfuerzo y corazón.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2008 -->
+        <div class="flex flex-col items-center text-center gap-4">
+          <div class="w-24 h-24 rounded-full border-4 border-blue-800 overflow-hidden">
+            <img src="/src/assets/2008.png" alt="2008" class="w-full h-full object-cover" />
+          </div>
+          <div class="text-blue-900 text-sm leading-relaxed px-2">
+            <p class="font-semibold text-blue-800 mb-1">2008 · Excelencia</p>
+            <p>
+              El trabajo y la constancia nos hicieron merecedores del primer certificado de calidad otorgado en la villa.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hoy -->
+        <div class="flex flex-col items-center text-center gap-4">
+          <div class="w-24 h-24 rounded-full border-4 border-blue-800 overflow-hidden">
+            <img src="/src/assets/hoy.png" alt="Hoy" class="w-full h-full object-cover" />
+          </div>
+          <div class="text-blue-900 text-sm leading-relaxed px-2">
+            <p class="font-semibold text-blue-800 mb-1">Hoy · Día a día</p>
+            <p>
+              Seguimos compartiendo nuestra pasión por la cocina, cuidando cada detalle y manteniendo viva nuestra esencia.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea de tiempo solo en escritorio -->
+      <div class="hidden sm:flex flex-row items-center justify-center gap-4 sm:gap-6 pt-2">
+        <!-- 1986 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="w-24 h-24 rounded-full border-4 border-blue-800 overflow-hidden">
+            <img src="/src/assets/apertura.png" alt="1986" class="w-full h-full object-cover" />
+          </div>
+          <p class="text-xs sm:text-sm text-blue-800 font-medium mt-1">1986<br>Apertura</p>
+        </div>
+
+        <!-- Flecha -->
+        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+
+        <!-- 2002 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="w-24 h-24 rounded-full border-4 border-blue-800 overflow-hidden">
+            <img src="/src/assets/2002.png" alt="2002" class="w-full h-full object-cover" />
+          </div>
+          <p class="text-xs sm:text-sm text-blue-800 font-medium mt-1">2002<br>Nuevo rumbo</p>
+        </div>
+
+        <!-- Flecha -->
+        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+
+        <!-- 2008 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="w-24 h-24 rounded-full border-4 border-blue-800 overflow-hidden">
+            <img src="/src/assets/2008.png" alt="2008" class="w-full h-full object-cover" />
+          </div>
+          <p class="text-xs sm:text-sm text-blue-800 font-medium mt-1">2008<br>Excelencia</p>
+        </div>
+
+        <!-- Flecha -->
+        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+
+        <!-- Hoy -->
+        <div class="flex flex-col items-center text-center">
+          <div class="w-24 h-24 rounded-full border-4 border-blue-800 overflow-hidden">
+            <img src="/src/assets/hoy.png" alt="Hoy" class="w-full h-full object-cover" />
+          </div>
+          <p class="text-xs sm:text-sm text-blue-800 font-medium mt-1">Hoy<br>Día a día</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>
