@@ -9,4 +9,5 @@
 
 body {
   @apply bg-[radial-gradient(125%_125%_at_50%_10%,_#ffffff_40%,_#f0f4f8_100%)] text-blue-950;
+  overflow-x: hidden;
 }
