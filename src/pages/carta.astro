@@ -14,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="relative z-10 max-w-6xl mx-auto flex flex-col gap-10">
 
       <!-- Bloque blanco unificado -->
-      <div class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-12 w-full flex flex-col items-center gap-10 animate-fade-in-up text-blue-900">
+      <div class="bg-white/90 backdrop-blur-md shadow-lg rounded-2xl p-6 sm:p-12 w-full flex flex-col items-center gap-10 animate-fade-in-up text-blue-900">
 
         <!-- Encabezado estilo "Sobre Nosotros" -->
         <div class="flex flex-col items-center gap-4">
@@ -26,41 +26,73 @@ import Layout from '../layouts/Layout.astro';
           <h1 class="text-5xl sm:text-6xl font-serif font-bold text-center">Carta</h1>
         </div>
 
-        <!-- Navegación por pestañas -->
-        <div class="flex flex-wrap justify-center gap-4">
-          <button class="tab-btn px-4 py-2 rounded border-2 border-transparent text-white bg-sky-800 hover:bg-sky-700" data-tab="entrantes">Entrantes</button>
-          <button class="tab-btn px-4 py-2 rounded border-2 border-transparent text-white bg-sky-800 hover:bg-sky-700" data-tab="mariscos">Mariscos</button>
-          <button class="tab-btn px-4 py-2 rounded border-2 border-transparent text-white bg-sky-800 hover:bg-sky-700" data-tab="pescados">Pescados</button>
-          <button class="tab-btn px-4 py-2 rounded border-2 border-transparent text-white bg-sky-800 hover:bg-sky-700" data-tab="carnes">Carnes</button>
-          <button class="tab-btn px-4 py-2 rounded border-2 border-transparent text-white bg-sky-800 hover:bg-sky-700" data-tab="postres">Postres</button>
+        <!-- Navegación por pestañas en móvil: scroll horizontal -->
+        <div class="sm:hidden w-full overflow-x-auto scrollbar-none touch-pan-x">
+          <div class="flex gap-3 w-max px-2">
+            <button class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl border-2 border-transparent text-white bg-sky-800" data-tab="entrantes">Entrantes</button>
+            <button class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl border-2 border-transparent text-white bg-sky-800" data-tab="mariscos">Mariscos</button>
+            <button class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl border-2 border-transparent text-white bg-sky-800" data-tab="pescados">Pescados</button>
+            <button class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl border-2 border-transparent text-white bg-sky-800" data-tab="carnes">Carnes</button>
+            <button class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl border-2 border-transparent text-white bg-sky-800" data-tab="postres">Postres</button>
+          </div>
+        </div>
+
+        <!-- Navegación por pestañas en escritorio -->
+        <div class="hidden sm:flex flex-wrap justify-center gap-4">
+          <button class="tab-btn px-4 py-2 rounded-xl border-2 border-transparent text-white bg-sky-800 hover:bg-sky-700" data-tab="entrantes">Entrantes</button>
+          <button class="tab-btn px-4 py-2 rounded-xl border-2 border-transparent text-white bg-sky-800 hover:bg-sky-700" data-tab="mariscos">Mariscos</button>
+          <button class="tab-btn px-4 py-2 rounded-xl border-2 border-transparent text-white bg-sky-800 hover:bg-sky-700" data-tab="pescados">Pescados</button>
+          <button class="tab-btn px-4 py-2 rounded-xl border-2 border-transparent text-white bg-sky-800 hover:bg-sky-700" data-tab="carnes">Carnes</button>
+          <button class="tab-btn px-4 py-2 rounded-xl border-2 border-transparent text-white bg-sky-800 hover:bg-sky-700" data-tab="postres">Postres</button>
         </div>
 
         <!-- Título de la sección actual -->
-        <div id="section-title" class="text-xl sm:text-2xl font-semibold italic text-blue-800 mt-2">Entrantes</div>
+        <h2 id="section-title" class="text-xl font-semibold italic border-b border-blue-200 w-full text-center pb-2">Entrantes</h2>
 
-        <!-- Contenido de secciones -->
+        <!-- Contenido de Entrantes como ejemplo -->
         <div id="entrantes" class="tab-content hidden w-full">
-          <div class="space-y-4 text-blue-900">
-            <div class="flex justify-between items-start border-b pb-2">
-              <span>Ensalada <span class="text-sm">(🧪 E-X)</span></span><span>5.80 €</span>
+          <div class="space-y-4 text-blue-900 text-sm">
+            <div class="border-b pb-2">
+              <div class="flex justify-between items-center font-medium text-base">
+                <span>Ensalada</span><span>5.80 €</span>
+              </div>
+              <div class="mt-1">🧪</div>
             </div>
-            <div class="flex justify-between items-start border-b pb-2">
-              <span>Ensalada Mixta <span class="text-sm">(🧪 E-X, 🐟 Pescado)</span></span><span>9.50 €</span>
+            <div class="border-b pb-2">
+              <div class="flex justify-between items-center font-medium text-base">
+                <span>Ensalada Mixta</span><span>9.50 €</span>
+              </div>
+              <div class="mt-1">🧪 🐟</div>
             </div>
-            <div class="flex justify-between items-start border-b pb-2">
-              <span>Ensaladilla Rusa <span class="text-sm">(🌾 Gluten, 🥚 Huevo, 🧀 Lácteos, 🌼 Mostaza, 🧪 E-X)</span></span><span>6.80 €</span>
+            <div class="border-b pb-2">
+              <div class="flex justify-between items-center font-medium text-base">
+                <span>Ensaladilla Rusa</span><span>6.80 €</span>
+              </div>
+              <div class="mt-1">🌾 🥚 🧀 🌼 🧪</div>
             </div>
-            <div class="flex justify-between items-start border-b pb-2">
-              <span>Espárragos con Mayonesa <span class="text-sm">(🥚 Huevo, 🧀 Lácteos, 🌼 Mostaza, 🧪 E-X)</span></span><span>9.00 €</span>
+            <div class="border-b pb-2">
+              <div class="flex justify-between items-center font-medium text-base">
+                <span>Espárragos con Mayonesa</span><span>9.00 €</span>
+              </div>
+              <div class="mt-1">🥚 🧀 🌼 🧪</div>
             </div>
-            <div class="flex justify-between items-start border-b pb-2">
-              <span>Pimientos del Piquillo con Ventresca <span class="text-sm">(🥚 Huevo, 🧀 Lácteos, 🐟 Pescado, 🌼 Mostaza)</span></span><span>12.50 €</span>
+            <div class="border-b pb-2">
+              <div class="flex justify-between items-center font-medium text-base">
+                <span>Pimientos del Piquillo con Ventresca</span><span>12.50 €</span>
+              </div>
+              <div class="mt-1">🥚 🧀 🐟 🌼</div>
             </div>
-            <div class="flex justify-between items-start border-b pb-2">
-              <span>Arenque Ahumado y Marinado <span class="text-sm">(🐟 Pescado)</span></span><span>14.50 €</span>
+            <div class="border-b pb-2">
+              <div class="flex justify-between items-center font-medium text-base">
+                <span>Arenque Ahumado y Marinado</span><span>14.50 €</span>
+              </div>
+              <div class="mt-1">🐟</div>
             </div>
-            <div class="flex justify-between items-start border-b pb-2">
-              <span>Micuit Foie de Pato Porción 50gr <span class="text-sm">(🌰 Frutos de Cáscara, 🐟 Pescado)</span></span><span>12.00 €</span>
+            <div class="border-b pb-2">
+              <div class="flex justify-between items-center font-medium text-base">
+                <span>Micuit Foie de Pato Porción 50gr</span><span>12.00 €</span>
+              </div>
+              <div class="mt-1">🌰 🐟</div>
             </div>
           </div>
         </div>
@@ -74,13 +106,13 @@ import Layout from '../layouts/Layout.astro';
               <span>Berberechos con patatas fritas</span><span>17.00 €</span>
             </div>
             <div class="flex justify-between items-start border-b pb-2">
-              <span>Zamburiñas <span class="text-sm">(🐚 Moluscos)</span></span><span>15.50 €</span>
+              <span>Zamburiñas <span class="text-sm">🐚 </span></span><span>15.50 €</span>
             </div>
             <div class="flex justify-between items-start border-b pb-2">
-              <span>Gambas Plancha <span class="text-sm">(🦐 Crustáceos)</span></span><span>16.00 €</span>
+              <span>Gambas Plancha <span class="text-sm">🦐 </span></span><span>16.00 €</span>
             </div>
             <div class="flex justify-between items-start border-b pb-2">
-              <span>Langostinos Plancha <span class="text-sm">(🦐 Crustáceos)</span></span><span>18.00 €</span>
+              <span>Langostinos Plancha <span class="text-sm">🦐</span></span><span>18.00 €</span>
             </div>
           </div>
         </div>
@@ -90,22 +122,22 @@ import Layout from '../layouts/Layout.astro';
         <div id="pescados" class="tab-content hidden w-full">
           <div class="space-y-4 text-blue-900">
             <div class="flex justify-between items-start border-b pb-2">
-              <span>Merluza en rollo <span class="text-sm">(🌾 Gluten, 🦐 Crustáceos, 🧀 Lácteos)</span></span><span>18.00 €</span>
+              <span>Merluza en rollo <span class="text-sm">🌾 🦐  🧀 </span></span><span>18.00 €</span>
             </div>
             <div class="flex justify-between items-start border-b pb-2">
-              <span>Chocos en Salsa <span class="text-sm">(🌾 Gluten, 🦐 Crustáceos, 🥚 Huevo, 🧀 Lácteos, 🌼 Mostaza, 🐚 Moluscos)</span></span><span>16.00 €</span>
+              <span>Chocos en Salsa <span class="text-sm">🌾 🦐 🥚 🧀 🌼 🐚 </span></span><span>16.00 €</span>
             </div>
             <div class="flex justify-between items-start border-b pb-2">
-              <span>Marraxo Plancha <span class="text-sm">(🐟 Pescado)</span></span><span>13.50 €</span>
+              <span>Marraxo Plancha <span class="text-sm">🐟</span></span><span>13.50 €</span>
             </div>
             <div class="flex justify-between items-start border-b pb-2">
-              <span>Chipirones Plancha <span class="text-sm">(🌾 Gluten, 🐚 Moluscos)</span></span><span>14.50 €</span>
+              <span>Chipirones Plancha <span class="text-sm">🌾 🐚 </span></span><span>14.50 €</span>
             </div>
             <div class="flex justify-between items-start border-b pb-2">
-              <span>Rape con Guisantes <span class="text-sm">(🌾 Gluten, 🦐 Crustáceos, 🥚 Huevo, 🧀 Lácteos, 🌼 Mostaza, 🧪 E-X)</span></span><span>20.50 €</span>
+              <span>Rape con Guisantes <span class="text-sm">(🌾 🦐 🥚 🧀 🌼 🧪)</span></span><span>20.50 €</span>
             </div>
             <div class="flex justify-between items-start border-b pb-2">
-              <span>Pulpo "A Feira" <span class="text-sm">(🦐 Crustáceos, 🌼 Mostaza)</span></span><span>19.50 €</span>
+              <span>Pulpo "A Feira" <span class="text-sm">🦐 🌼</span></span><span>19.50 €</span>
             </div>
           </div>
         </div>
@@ -122,7 +154,7 @@ import Layout from '../layouts/Layout.astro';
               <span>Zorza Casera</span><span>13.50 €</span>
             </div>
             <div class="flex justify-between items-start border-b pb-2">
-              <span>Morcilla de Arroz <span class="text-sm">(🌰 Frutos de Cáscara, 🥚 Huevo, 🧀 Lácteos, 🌼 Mostaza, 🌿 Apio)</span></span><span>15.00 €</span>
+              <span>Morcilla de Arroz <span class="text-sm">🌰 🥚 🧀 🌼 🌿</span></span><span>15.00 €</span>
             </div>
              <div class="flex justify-between items-start border-b pb-2">
               <span>Ternera Asada</span><span>15.00 €</span>
@@ -134,22 +166,22 @@ import Layout from '../layouts/Layout.astro';
         <div id="postres" class="tab-content hidden w-full">
             <div class="space-y-4 text-blue-900">
                 <div class="flex justify-between items-start border-b pb-2">
-                <span>Crema de Yogurt <span class="text-sm">(🧀 Lácteos)</span></span><span>4.50 €</span>
+                <span>Crema de Yogurt <span class="text-sm">🧀</span></span><span>4.50 €</span>
                 </div>
                 <div class="flex justify-between items-start border-b pb-2">
-                <span>Tarta de Santiago <span class="text-sm">(🥚 Huevo, 🌾 Gluten, 🌰 Frutos de Cáscara, ⚪ Sésamo, 🧪 E-X)</span></span><span>4.50 €</span>
+                <span>Tarta de Santiago <span class="text-sm">🥚 🌾 🌰 ⚪ 🧪</span></span><span>4.50 €</span>
                 </div>
                 <div class="flex justify-between items-start border-b pb-2">
-                <span>Requesón con Miel <span class="text-sm">(🧀 Lácteos)</span></span><span>4.00 €</span>
+                <span>Requesón con Miel <span class="text-sm">🧀 </span></span><span>4.00 €</span>
                 </div>
                 <div class="flex justify-between items-start border-b pb-2">
-                <span>Arroz con Leche <span class="text-sm">(🧀 Lácteos)</span></span><span>4.50 €</span>
+                <span>Arroz con Leche <span class="text-sm">🧀<span></span><span>4.50 €</span>
                 </div>
                 <div class="flex justify-between items-start border-b pb-2">
-                <span>Tarta de Galleta y Caramelo <span class="text-sm">(🥚 Huevo, 🌾 Gluten, 🧀 Lácteos, 🌰 Frutos de Cáscara, ⚪ Sésamo, 🧪 E-X)</span></span><span>4.80 €</span>
+                <span>Tarta de Galleta y Caramelo <span class="text-sm">🥚 🌾 🧀 🌰 ⚪ 🧪</span></span><span>4.80 €</span>
                 </div>
                 <div class="flex justify-between items-start border-b pb-2">
-                <span>Tarta de Chocolate <span class="text-sm">(🥚 Huevo, 🌾 Gluten, 🧀 Lácteos, 🌰 Frutos de Cáscara, ⚪ Sésamo, 🧪 E-X)</span></span><span>4.80 €</span>
+                <span>Tarta de Chocolate <span class="text-sm">🥚 🌾 🧀 🌰 ⚪ 🧪</span></span><span>4.80 €</span>
                 </div>
                 <div class="pt-4 text-center italic text-blue-800">
                 Tenemos helados sin gluten, ¡pregúntanos!
@@ -181,46 +213,57 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <script>
-    if (typeof window !== 'undefined') {
-      const tabs = document.querySelectorAll('.tab-btn');
-      const contents = document.querySelectorAll('.tab-content');
-      const title = document.getElementById('section-title');
+<script>
+  if (typeof window !== 'undefined') {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+    const title = document.getElementById('section-title');
 
-      function showTab(id) {
-        contents.forEach(c => {
-          if (c.id === id) {
-            c.classList.remove('hidden');
-            c.classList.add('block');
-          } else {
-            c.classList.remove('block');
-            c.classList.add('hidden');
-          }
-        });
-
-        tabs.forEach(t => {
-          if (t.getAttribute('data-tab') === id) {
-            t.classList.remove('bg-sky-800', 'text-white');
-            t.classList.add('bg-white', 'text-sky-800', 'border-sky-800');
-          } else {
-            t.classList.add('bg-sky-800', 'text-white');
-            t.classList.remove('bg-white', 'text-sky-800', 'border-sky-800');
-          }
-        });
-
-        title.textContent = id.charAt(0).toUpperCase() + id.slice(1);
-      }
-
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          const target = tab.getAttribute('data-tab');
-          showTab(target);
-        });
+    function showTab(id) {
+      contents.forEach(c => {
+        if (c.id === id) {
+          c.classList.remove('hidden');
+          c.classList.add('block');
+        } else {
+          c.classList.remove('block');
+          c.classList.add('hidden');
+        }
       });
 
-      window.addEventListener('DOMContentLoaded', () => {
-        showTab('entrantes');
+      tabs.forEach(t => {
+        if (t.getAttribute('data-tab') === id) {
+          t.classList.remove('bg-sky-800', 'text-white', 'border-transparent');
+          t.classList.add('bg-white', 'text-sky-800', 'border-sky-800');
+        } else {
+          t.classList.add('bg-sky-800', 'text-white', 'border-transparent');
+          t.classList.remove('bg-white', 'text-sky-800', 'border-sky-800');
+        }
       });
+
+      title.textContent = id.charAt(0).toUpperCase() + id.slice(1);
     }
-  </script>
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab').toLowerCase();
+        showTab(target);
+      });
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      showTab('entrantes');
+    });
+  }
+</script>
+
+<style>
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none; /* IE y Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>
+
 </Layout>
